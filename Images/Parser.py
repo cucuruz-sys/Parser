@@ -1,4 +1,3 @@
-from bs4 import BeautifulSoup
 import requests
 import sys
 import time
@@ -10,11 +9,6 @@ from selenium import webdriver
 
 DRIVER_PATH = '../chromedriver.exe'
 wd = webdriver.Chrome(executable_path=DRIVER_PATH)
-
-def get_soup(url,header):
-	print(url)
-	response = requests.get(url)
-	return BeautifulSoup(response.content, "html.parser")
 
 def downloadImages(query_item, num_images, directory):
 	list = fetch_image_urls(query_item, num_images)
