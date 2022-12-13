@@ -8,7 +8,7 @@ from pathlib import Path
 # adapted from http://stackoverflow.com/questions/20716842/python-download-images-from-google-image-search
 from selenium import webdriver
 
-DRIVER_PATH = '../../CAlOGEN/chromedriver.exe'
+DRIVER_PATH = '../chromedriver.exe'
 wd = webdriver.Chrome(executable_path=DRIVER_PATH)
 
 def get_soup(url,header):
